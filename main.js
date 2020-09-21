@@ -155,6 +155,7 @@ async function displayDetailedCard(event) {
     let typeLabel = document.createElement("td");
     typeLabel.textContent = "Type";
     let typeValue = document.createElement("td");
+    typeValue.classList.add("detailed-card-stats-value");
     typeValue.textContent = pokemon.type;
     typeRow.appendChild(typeLabel);
     typeRow.appendChild(typeValue);
@@ -164,6 +165,7 @@ async function displayDetailedCard(event) {
     let heightLabel = document.createElement("td");
     heightLabel.textContent = "Height";
     let heightValue = document.createElement("td");
+    heightValue.classList.add("detailed-card-stats-value");
     heightValue.textContent = `${pokemon.height} cm`;
     heightRow.appendChild(heightLabel);
     heightRow.appendChild(heightValue);
@@ -173,6 +175,7 @@ async function displayDetailedCard(event) {
     let weightLabel = document.createElement("td");
     weightLabel.textContent = "Weight";
     let weightValue = document.createElement("td");
+    weightValue.classList.add("detailed-card-stats-value");
     weightValue.textContent = `${pokemon.weight} kg`;
     weightRow.appendChild(weightLabel);
     weightRow.appendChild(weightValue);

@@ -157,6 +157,10 @@ main {
     grid-area: stats;
 }
 
+.detailed-card-stats-value {
+    padding-left: 1rem;
+}
+
 .detailed-card-description {
     font-size: 1.5rem;
     color: white;
