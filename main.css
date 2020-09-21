@@ -176,7 +176,7 @@ main {
 @media (max-width: 900px) {
     .detailed-card {
         width: 80vw;
-        height: 90vh;
+        height: 80vh;
         overflow: scroll;
         grid-template-columns: auto;
         grid-template-rows: repeat(5, auto);
