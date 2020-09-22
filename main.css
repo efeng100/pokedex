@@ -181,7 +181,7 @@ main {
     .detailed-card {
         width: 80vw;
         height: 80vh;
-        overflow: scroll;
+        overflow-y: scroll;
         grid-template-columns: auto;
         grid-template-rows: repeat(5, auto);
         grid-template-areas:
