@@ -52,7 +52,9 @@ function createCardDiv(pokemon) {
     cardType.textContent = pokemon.type;
     card.appendChild(cardType);
 
-    card.addEventListener("click", displayDetailedCard);
+    card.addEventListener("click", () => {
+        displayDetailedCard(pokemon.id);
+    });
 
     return card;
 }
@@ -109,12 +111,7 @@ async function getDetailedPokemonData(id) {
     }
 }
 
-async function displayDetailedCard(event) {
-    let selectedCard = event.target;
-    if (!selectedCard.classList.contains("card")) {
-        selectedCard = selectedCard.parentNode;
-    }
-    let id = +selectedCard.querySelector(".card-id").textContent.slice(1);
+async function displayDetailedCard(id) {
     let pokemon = await getDetailedPokemonData(id);
 
     let card = document.createElement("div");
