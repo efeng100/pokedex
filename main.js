@@ -1,6 +1,5 @@
 const NUM_POKEMON = 151;
 
-const body = document.querySelector("body");
 const cardGrid = document.querySelector("#cards");
 
 async function getPokemonData(id) {
@@ -192,13 +191,13 @@ async function displayDetailedCard(id) {
     cardShadow.classList.add("detailed-card-shadow");
     cardShadow.addEventListener("click", removeDetailedCard);
 
-    body.appendChild(cardShadow);
-    body.appendChild(card);
+    document.body.appendChild(cardShadow);
+    document.body.appendChild(card);
 }
 
 function removeDetailedCard(event) {
-    body.querySelector(".detailed-card").remove();
-    body.querySelector(".detailed-card-shadow").remove();
+    document.body.querySelector(".detailed-card").remove();
+    document.body.querySelector(".detailed-card-shadow").remove();
 }
 
 displayCards();
