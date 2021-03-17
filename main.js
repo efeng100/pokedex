@@ -59,9 +59,14 @@ function createCardDiv(pokemon) {
 }
 
 async function displayCards() {
-    for (let i = 1; i <= NUM_POKEMON; i++) {
-        cardGrid.appendChild(createCardDiv(await getPokemonData(i)));
-    }
+    let data = await Promise.all([...Array(NUM_POKEMON).keys()].map(num => num+1).map(num => getPokemonData(num)));
+    data.forEach(pokemon => {
+        try {
+            cardGrid.appendChild(createCardDiv(pokemon));
+        } catch(err) {
+            console.log(err);
+        }
+    });
 }
 
 async function getDetailedPokemonData(id) {
